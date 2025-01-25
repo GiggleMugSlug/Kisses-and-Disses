@@ -4,9 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kisses & Disses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <h1>Welcome to Kisses & Disses!</h1>
   <p>Come here for random compliments and insults.</p>
+
+  <!-- Button for Compliment -->
+  <button onclick="getCompliment()">Get Compliment</button>
+
+  <!-- Button for Insult -->
+  <button onclick="getInsult()">Get Insult</button>
+
+  <h2 id="response"></h2>
+
+  <script>
+    // Array of compliments
+    const compliments = [
+      "You're amazing!",
+      "You brighten up every room you walk into.",
+      "You're a true friend!",
+      "You have the best sense of humor!",
+      "You're incredibly talented!"
+    ];
+
+    // Array of insults
+    const insults = [
+      "You're like a cloud. When you disappear, it's a beautiful day.",
+      "You bring everyone so much joy when you leave the room.",
+      "You're proof that even a broken clock is right twice a day.",
+      "Your secrets are always safe with me. I never even listen when you tell me them.",
+      "You have the perfect face for radio!"
+    ];
+
+    // Function to get a random compliment
+    function getCompliment() {
+      const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+      document.getElementById("response").textContent = randomCompliment;
+    }
+
+    // Function to get a random insult
+    function getInsult() {
+      const randomInsult = insults[Math.floor(Math.random() * insults.length)];
+      document.getElementById("response").textContent = randomInsult;
+    }
+  </script>
 </body>
 </html>
+
