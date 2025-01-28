@@ -1,35 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kisses & Disses</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kisses & Disses</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin-top: 50px;
-    }
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kisses & Disses</title>
-    <!-- CSS inside the <style> tag -->
     <style>
         /* Style for the body */
         body {
@@ -46,7 +20,7 @@
             margin-top: 50px;
         }
 
-        /* Style for the button */
+        /* Style for the buttons */
         button {
             background-color: #4CAF50;
             color: white;
@@ -62,107 +36,108 @@
         button:hover {
             background-color: #45a049;
         }
+
+        /* Style for the response text */
+        #response {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to Kisses & Disses!</h1>
-    <button>Generate Compliment</button>
-</body>
-</html>
+    <p>Come here for random compliments and insults.</p>
 
-</head>
-<body>
-  <h1>Welcome to Kisses & Disses!</h1>
-  <p>Come here for random compliments and insults.</p>
+    <!-- Button for Compliment -->
+    <button class="fancy-button" onclick="getCompliment()">Get a Kiss 💋</button>
 
-  <!-- Button for Compliment -->
- <button class="fancy-button" onclick="getCompliment()">Get a Kiss 💋</button>
+    <!-- Button for Insult -->
+    <button class="fancy-button" onclick="getInsult()">Get a Diss 🔥</button>
 
-  <!-- Button for Insult -->
- <button class="fancy-button" onclick="getInsult()">Get a Diss 🔥</button>
+    <h2 id="response"></h2>
 
-  <h2 id="response"></h2>
+    <script>
+        // Array of compliments
+        const compliments = [
+            "You're amazing!",
+            "You brighten up every room you walk into.",
+            "You're a true friend!",
+            "You’re like a rainbow on a rainy day—unexpected, vibrant, and absolutely needed.",
+            "If brilliance were a contest, you’d be in a league of your own.",
+            "Your laughter is like a warm hug for the soul.",
+            "Talking to you is like finding the perfect skipping stone—rare and delightful.",
+            "If kindness were currency, you’d be a billionaire.",
+            "You’re the plot twist everyone wants in their story—surprising and unforgettable.",
+            "You’re proof that stars don’t just shine at night.",
+            "You’re like a well-timed meme—always making things better.",
+            "Your creativity could turn a blank page into a masterpiece.",
+            "You’re the human equivalent of freshly baked cookies.",
+            "You’re like a sunflower in a field of daisies—standing tall and shining bright.",
+            "You’re the reason Wi-Fi signals feel stronger—your presence just makes things work.",
+            "You’re like finding fries at the bottom of the bag—pure joy.",
+            "If charisma were a superpower, you’d be in the Avengers.",
+            "You could turn a Monday into a Friday with just your energy.",
+            "You’re a glitter explosion in a world of gray.",
+            "If smiles were fuel, you’d power the world.",
+            "You have the charm of a perfectly timed song on shuffle.",
+            "Being around you is like being in a cozy sweater—pure comfort.",
+            "You bring the pizzazz to life’s pizza.",
+            "Your wit is sharper than a freshly honed sword.",
+            "You’re like the secret ingredient that makes everything better.",
+            "You’re living proof that unicorns exist.",
+            "You’re the sparkle in glitter’s eye.",
+            "You’re like the favorite character in every book—irresistibly lovable.",
+            "You have the best sense of humor!",
+            "You're incredibly talented!"
+        ];
 
-  <script>
-    // Array of compliments
-    const compliments = [
-      "You're amazing!",
-      "You brighten up every room you walk into.",
-      "You're a true friend!",
-      "You’re like a rainbow on a rainy day—unexpected, vibrant, and absolutely needed.",
-      "If brilliance were a contest, you’d be in a league of your own.",
-      "Your laughter is like a warm hug for the soul.",
-      "Talking to you is like finding the perfect skipping stone—rare and delightful.",
-      "If kindness were currency, you’d be a billionaire.",
-      "You’re the plot twist everyone wants in their story—surprising and unforgettable.",
-      "You’re proof that stars don’t just shine at night.",
-      "You’re like a well-timed meme—always making things better.",
-      "Your creativity could turn a blank page into a masterpiece.",
-      "You’re the human equivalent of freshly baked cookies.",
-      "You’re like a sunflower in a field of daisies—standing tall and shining bright.",
-      "You’re the reason Wi-Fi signals feel stronger—your presence just makes things work.",
-      "You’re like finding fries at the bottom of the bag—pure joy.",
-      "If charisma were a superpower, you’d be in the Avengers.",
-      "You could turn a Monday into a Friday with just your energy.",
-      "You’re a glitter explosion in a world of gray.",
-      "If smiles were fuel, you’d power the world.",
-      "You have the charm of a perfectly timed song on shuffle.",
-      "Being around you is like being in a cozy sweater—pure comfort.",
-      "You bring the pizzazz to life’s pizza.",
-      "Your wit is sharper than a freshly honed sword.",
-      "You’re like the secret ingredient that makes everything better.",
-      "You’re living proof that unicorns exist.",
-      "You’re the sparkle in glitter’s eye.",
-      "You’re like the favorite character in every book—irresistibly lovable.",
-      "You have the best sense of humor!",
-      "You're incredibly talented!",
-    ];
+        // Array of insults
+        const insults = [
+            "You're like a cloud. When you disappear, it's a beautiful day.",
+            "You bring everyone so much joy when you leave the room.",
+            "You're proof that even a broken clock is right twice a day.",
+            "You’re like a cloud on a sunny day—unexpected and mildly annoying.",
+            "Your sarcasm needs subtitles—it’s hard to tell where the joke ends and the confusion begins.",
+            "You’re proof that even chaos can be punctual.",
+            "You have the grace of a giraffe on roller skates.",
+            "You’re like a puzzle missing one piece—close, but just not there.",
+            "Your wit is so dry it makes the Sahara look like a water park.",
+            "If overthinking were an Olympic sport, you’d have a gold medal.",
+            "You’re about as subtle as a clown at a funeral.",
+            "You’re like a speed bump on life’s highway—unnecessary but unavoidable.",
+            "You’re the reason 'bless your heart' was invented.",
+            "You have the charm of a door-to-door salesperson.",
+            "You’re like a broken pencil—no point to be found.",
+            "If cluelessness were an art, you’d be Picasso.",
+            "You’re about as reliable as a weather forecast from last week.",
+            "You’re the plot twist nobody asked for.",
+            "You have the persistence of a mosquito—annoying but impressive.",
+            "You’re like a pop-up ad—always there when nobody wants you.",
+            "Your timing is as perfect as a clock with no batteries.",
+            "You’re the reason instructions have warnings.",
+            "You have the subtlety of a marching band in a library.",
+            "You’re like the Wi-Fi at a coffee shop—slow and unreliable.",
+            "You’re the human equivalent of a lukewarm cup of coffee.",
+            "You’re like glitter after crafting—hard to get rid of and everywhere you shouldn’t be.",
+            "You have the accuracy of a drunk dart player.",
+            "You’re the plot hole in an otherwise perfect story.",
+            "Your secrets are always safe with me. I never even listen when you tell me them.",
+            "You have the perfect face for radio!"
+        ];
 
-    // Array of insults
-    const insults = [
-      "You're like a cloud. When you disappear, it's a beautiful day.",
-      "You bring everyone so much joy when you leave the room.",
-      "You're proof that even a broken clock is right twice a day.",
-      "You’re like a cloud on a sunny day—unexpected and mildly annoying.",
-      "Your sarcasm needs subtitles—it’s hard to tell where the joke ends and the confusion begins.",
-      "You’re proof that even chaos can be punctual.",
-      "You have the grace of a giraffe on roller skates.",
-      "You’re like a puzzle missing one piece—close, but just not there.",
-      "Your wit is so dry it makes the Sahara look like a water park.",
-      "If overthinking were an Olympic sport, you’d have a gold medal.",
-      "You’re about as subtle as a clown at a funeral.",
-      "You’re like a speed bump on life’s highway—unnecessary but unavoidable.",
-      "You’re the reason 'bless your heart' was invented.",
-      "You have the charm of a door-to-door salesperson.",
-      "You’re like a broken pencil—no point to be found.",
-      "If cluelessness were an art, you’d be Picasso.",
-      "You’re about as reliable as a weather forecast from last week.",
-      "You’re the plot twist nobody asked for.",
-      "You have the persistence of a mosquito—annoying but impressive.",
-      "You’re like a pop-up ad—always there when nobody wants you.",
-      "Your timing is as perfect as a clock with no batteries.",
-      "You’re the reason instructions have warnings.",
-      "You have the subtlety of a marching band in a library.",
-      "You’re like the Wi-Fi at a coffee shop—slow and unreliable.",
-      "You’re the human equivalent of a lukewarm cup of coffee.",
-      "You’re like glitter after crafting—hard to get rid of and everywhere you shouldn’t be.",
-      "You have the accuracy of a drunk dart player.",
-      "You’re the plot hole in an otherwise perfect story.",
-      "Your secrets are always safe with me. I never even listen when you tell me them.",
-      "You have the perfect face for radio!",
-    ];
+        // Function to get a random compliment
+        function getCompliment() {
+            const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+            document.getElementById("response").textContent = randomCompliment;
+        }
 
-    // Function to get a random compliment
-    function getCompliment() {
-      const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-      document.getElementById("response").textContent = randomCompliment;
-    }
-
-    // Function to get a random insult
-    function getInsult() {
-      const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-      document.getElementById("response").textContent = randomInsult;
-    }
-  </script>
+        // Function to get a random insult
+        function getInsult() {
+            const randomInsult = insults[Math.floor(Math.random() * insults.length)];
+            document.getElementById("response").textContent = randomInsult;
+        }
+    </script>
 </body>
 </html>
