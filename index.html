@@ -55,7 +55,8 @@
     </style>
 </head>
 <body>
-<img src="https://imgur.com/wD0GyOF.png" alt="Kisses and Disses" style="width: 100%; max-width: 800px; height: auto; margin-top: 0; display: block;">
+<!-- Centered Header Image -->
+<img src="https://imgur.com/wD0GyOF.png" alt="Kisses and Disses" style="width: 100%; max-width: 800px; height: auto; margin: 0 auto; display: block;">
 
 <!-- Main Header (H1 for SEO) -->
 <h1 style="margin-top: 10px; text-align: center;">Welcome to Kisses & Disses - Your Compliment and Insult Generator</h1>
@@ -63,18 +64,20 @@
 <!-- Description (SEO-friendly text with keywords) -->
 <p style="margin-top: 10px; text-align: center;">Come here for random compliments and insults that will make you smile or laugh out loud! Our compliment and insult generator brings fun and joy to your day.</p>
 
-<!-- Call-to-Action: Compliment Button -->
-<button onclick="getCompliment()" style="margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">Get a Kiss 💋</button>
+<!-- Button Container for Side-by-Side Layout -->
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px;">
+    <!-- Call-to-Action: Compliment Button -->
+    <button onclick="getCompliment()" style="padding: 10px 20px; font-size: 16px;">Get a Kiss 💋</button>
 
-<!-- Call-to-Action: Insult Button -->
-<button onclick="getInsult()" style="margin-top: 10px; display: block; margin-left: auto; margin-right: auto;">Get a Diss 🔥</button>
+    <!-- Call-to-Action: Insult Button -->
+    <button onclick="getInsult()" style="padding: 10px 20px; font-size: 16px;">Get a Diss 🔥</button>
+</div>
 
 <!-- Section for displaying the response -->
 <h2 id="response" style="margin-top: 20px; text-align: center;"></h2>
 
 <!-- Example Image with Alt Text for SEO -->
 <img src="compliment-image.jpg" alt="Random Compliment Generator showing happy faces and fun things" style="margin-top: 10px; width:100%; max-width: 800px; height:auto; margin: 20px auto; display: block;">
-
 
   <script>
     // Array of compliments
