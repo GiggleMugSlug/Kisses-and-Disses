@@ -177,5 +177,26 @@
       document.getElementById("response").textContent = randomInsult;
     }
   </script>
+  <script>
+    function animateKiss() {
+        let img = document.getElementById("kissImage");
+        img.src = "https://i.imgur.com/YG3ShU6.png"; // Puckered lips
+        setTimeout(() => {
+            img.src = "https://i.imgur.com/sH6NF34.png"; // Reset to normal lips
+        }, 500);
+    }
+
+    function animateDiss() {
+        let img = document.getElementById("dissImage");
+        img.src = "https://i.imgur.com/RcDp1uO.png"; // Tongue sticking out
+        setTimeout(() => {
+            img.src = "https://i.imgur.com/WgJm0pb.png"; // Reset to normal mouth
+        }, 500);
+    }
+
+    document.getElementById("kissButton").addEventListener("click", animateKiss);
+    document.getElementById("dissButton").addEventListener("click", animateDiss);
+</script>
+
 </body>
 </html>
