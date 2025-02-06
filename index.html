@@ -11,6 +11,18 @@
   gtag('config', 'G-4QSYK4C0TD');
 </script>  
 <meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QSYK4C0TD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-4QSYK4C0TD');
+</script>  
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Title Tag: SEO Optimized -->
@@ -91,9 +103,7 @@
     </button>
 </div>
 
-
-
-  <script>
+<script>
     // Array of compliments
     const compliments = [
       "You're amazing!",
@@ -173,8 +183,8 @@
       const randomInsult = insults[Math.floor(Math.random() * insults.length)];
       document.getElementById("response").textContent = randomInsult;
     }
-  </script>
-  <script>
+
+    // Animation Functions
     function animateKiss() {
         let img = document.getElementById("kissImage");
         img.src = "https://i.imgur.com/YG3ShU6.png"; // Puckered lips
@@ -194,27 +204,6 @@
     document.getElementById("kissButton").addEventListener("click", animateKiss);
     document.getElementById("dissButton").addEventListener("click", animateDiss);
 </script>
-<script>
-    function animateKiss() {
-        let img = document.getElementById("kissImage");
-        img.src = "https://i.imgur.com/YG3ShU6.png"; // Puckered lips
-        setTimeout(() => {
-            img.src = "https://i.imgur.com/sH6NF34.png"; // Reset to normal lips
-        }, 500);
-    }
-
-    function animateDiss() {
-        let img = document.getElementById("dissImage");
-        img.src = "https://i.imgur.com/RcDp1uO.png"; // Tongue sticking out
-        setTimeout(() => {
-            img.src = "https://i.imgur.com/WgJm0pb.png"; // Reset to normal mouth
-        }, 500);
-    }
-
-    document.getElementById("kissButton").addEventListener("click", animateKiss);
-    document.getElementById("dissButton").addEventListener("click", animateDiss);
-</script>
-</body>
-
 </body>
 </html>
+
