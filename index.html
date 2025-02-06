@@ -7,19 +7,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-4QSYK4C0TD');
-</script>  
-<meta charset="UTF-8">
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4QSYK4C0TD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
   gtag('config', 'G-4QSYK4C0TD');
 </script>  
 <meta charset="UTF-8">
@@ -103,6 +90,9 @@
     </button>
 </div>
 
+<!-- Response Text -->
+<p id="response" style="font-size: 18px; font-weight: bold; color: teal;"></p>
+
 <script>
     // Array of compliments
     const compliments = [
@@ -184,7 +174,7 @@
       document.getElementById("response").textContent = randomInsult;
     }
 
-    // Animation Functions
+    // Animation for Kiss button
     function animateKiss() {
         let img = document.getElementById("kissImage");
         img.src = "https://i.imgur.com/YG3ShU6.png"; // Puckered lips
@@ -193,6 +183,7 @@
         }, 500);
     }
 
+    // Animation for Diss button
     function animateDiss() {
         let img = document.getElementById("dissImage");
         img.src = "https://i.imgur.com/RcDp1uO.png"; // Tongue sticking out
@@ -201,9 +192,9 @@
         }, 500);
     }
 
+    // Event listeners for animation
     document.getElementById("kissButton").addEventListener("click", animateKiss);
     document.getElementById("dissButton").addEventListener("click", animateDiss);
 </script>
 </body>
 </html>
-
