@@ -168,27 +168,14 @@ function getCompliment() {
     animateKiss(); // Call the animation when a compliment is shown
 }
 
+// Function to get a random compliment
+function getCompliment() {
+    const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+    document.getElementById("response").textContent = randomCompliment;
+}
+
 // Function to get a random insult
 function getInsult() {
     const randomInsult = insults[Math.floor(Math.random() * insults.length)];
     document.getElementById("response").textContent = randomInsult;
-    animateDiss(); // Call the animation when an insult is shown
-}
-
-// Animation for Kiss button (Compliment)
-function animateKiss() {
-    let img = document.getElementById("kissImage");
-    img.src = "https://i.imgur.com/YG3ShU6.png"; // Puckered lips image
-    setTimeout(() => {
-        img.src = "https://i.imgur.com/sH6NF34.png"; // Reset to normal lips after 500ms
-    }, 500);
-}
-
-// Animation for Diss button (Insult)
-function animateDiss() {
-    let img = document.getElementById("dissImage");
-    img.src = "https://i.imgur.com/RcHrTy8.png"; // Angry face image
-    setTimeout(() => {
-        img.src = "https://i.imgur.com/sH6NF34.png"; // Reset to normal lips after 500ms
-    }, 500);
 }
