@@ -12,55 +12,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Remove duplicate description -->
     <meta name="description" content="Kisses & Disses - A fun generator for compliments and insults. Enjoy random positive and funny messages.">
     <meta name="author" content="Your Name or Website">
     <title>Kisses & Disses</title>
 
-    <!-- Additional head elements, like linking stylesheets or fonts can go here -->
-</head>
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta property="og:title" content="Random Compliment and Insult Generator | Fun Compliments & Sassy Insults">
+    <meta property="og:description" content="Get random compliments or sassy insults with our fun and interactive generator. Brighten your day with a compliment or a funny diss. Try it now!">
+    <meta property="og:image" content="https://imgur.com/a/OKfJnkw">
+    <meta property="og:url" content="https://yourwebsite.com">
 
-<!-- Meta Description: SEO Optimized -->
-<meta name="description" content="Get random compliments or sassy insults with our fun and interactive generator. Brighten your day with a compliment or a funny diss. Try it now!">
+    <meta name="keywords" content="random compliments, random insults, compliment generator, insult generator, fun compliments, funny insults, compliment generator online, random compliment tool, funny compliment generator">
 
-<!-- Open Graph Meta Tags for social sharing -->
-<meta property="og:title" content="Random Compliment and Insult Generator | Fun Compliments & Sassy Insults">
-<meta property="og:description" content="Get random compliments or sassy insults with our fun and interactive generator. Brighten your day with a compliment or a funny diss. Try it now!">
-<meta property="og:image" content="https://imgur.com/a/OKfJnkw">
-<meta property="og:url" content="https://yourwebsite.com">
-
-<meta name="keywords" content="random compliments, random insults, compliment generator, insult generator, fun compliments, funny insults, compliment generator online, random compliment tool, funny compliment generator">
-
-<style>
-    /* SEO-Friendly Styles */
-    body {
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        background: linear-gradient(to right, #ADD8E6, #90EE90);
-        text-align: center;
-        margin-top: 0px;
-    }
-    button {
-        padding: 10px 20px;
-        margin: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #5FA8D3;
-        color: white;
-        border: none;
-        border-radius: 5px;
-    }
-    h1, h2, h3 {
-        color: #ff69b4;
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
-</style>
+    <style>
+        /* SEO-Friendly Styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(to right, #ADD8E6, #90EE90);
+            text-align: center;
+            margin-top: 0px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #5FA8D3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        h1, h2, h3 {
+            color: #ff69b4;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
-<!-- Header Image -->
-<!-- Header Image -->
 <!-- Header Image -->
 <img src="https://i.imgur.com/wD0GyOF.png" 
      alt="Kisses and Disses" 
@@ -97,7 +90,6 @@
 
 <!-- Add Extra Space at the Bottom -->
 <div style="height: 200px;"></div>
-
 
 <script>
     // Array of compliments
@@ -192,15 +184,4 @@
     // Animation for Diss button
     function animateDiss() {
         let img = document.getElementById("dissImage");
-        img.src = "https://i.imgur.com/RcDp1uO.png"; // Tongue sticking out
-        setTimeout(() => {
-            img.src = "https://i.imgur.com/WgJm0pb.png"; // Reset to normal mouth
-        }, 500);
-    }
-
-    // Event listeners for animation
-    document.getElementById("kissButton").addEventListener("click", animateKiss);
-    document.getElementById("dissButton").addEventListener("click", animateDiss);
-</script>
-</body>
-</html>
+        img.src = "https://i.imgur.com/Rc
