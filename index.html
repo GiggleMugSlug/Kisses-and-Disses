@@ -161,17 +161,20 @@
       "You have the perfect face for radio!"
     ];
 
-    // Function to get a random compliment
-    function getCompliment() {
-      const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
-      document.getElementById("response").textContent = randomCompliment;
-    }
+  // Function to get a random compliment
+function getCompliment() {
+    const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+    console.log(randomCompliment); // Debugging line
+    document.getElementById("response").textContent = randomCompliment;
+}
 
-    // Function to get a random insult
-    function getInsult() {
-      const randomInsult = insults[Math.floor(Math.random() * insults.length)];
-      document.getElementById("response").textContent = randomInsult;
-    }
+// Function to get a random insult
+function getInsult() {
+    const randomInsult = insults[Math.floor(Math.random() * insults.length)];
+    console.log(randomInsult); // Debugging line
+    document.getElementById("response").textContent = randomInsult;
+}
+
 
     // Animation for Kiss button
     function animateKiss() {
